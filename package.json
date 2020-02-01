@@ -52,6 +52,6 @@
     "react": "*",
     "react-dom": "*",
     "react-router-dom": "^5.1.2",
-    "styled-components": "*"
+    "styled-components": "^5.0.0"
   }
 }
