@@ -10,7 +10,7 @@ const HomePageStyled = styled.div`
     flex-wrap: wrap;
     align-items: center;
     padding-top: ${theme.standardSize * 10}em;
-    margin-bottom: ${theme.standardSize * 8}em;
+    margin-bottom: ${theme.standardSize * 6}em;
 
     div{
       height: ${theme.standardSize * 3}em;
