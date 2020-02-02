@@ -1,18 +1,25 @@
 // == Import npm
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // == Import
 import HeaderStyled from './HeaderStyled';
 
 // == Composant
-const Header = () => (
+const Header = ({ categories }) => (
   <HeaderStyled>
     <nav>
-      <a href="#">home</a>
-      <a href="#">no limit</a>
-      <a href="#">test</a>
+      {categories.map((category) => (
+        <a href="#" key={category}>{category}</a>
+      ))}
     </nav>
   </HeaderStyled>
 );
+
+Header.propTypes = {
+  categories: PropTypes.arrayOf(
+    PropTypes.string.isRequired,
+  ).isRequired,
+};
 
 export default Header;

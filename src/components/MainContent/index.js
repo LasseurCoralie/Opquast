@@ -9,7 +9,7 @@ import Quiz from '../Quiz';
 
 const MainContent = () => (
   <MainContentStyled>
-    {/* <HomePage /> */}
+    <HomePage />
     <Quiz />
   </MainContentStyled>
 );
