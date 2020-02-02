@@ -1,5 +1,5 @@
 // == Import npm
-import React from 'react';
+import React, { useState } from 'react';
 
 // == Import data
 import categoriesData from 'src/data/categories';
@@ -10,9 +10,11 @@ import Header from '../Header';
 import Footer from '../Footer';
 import MainContent from '../MainContent';
 
-
-
+// == Import Style SCSS
 import BodyStyled from './BodyStyled';
+
+// Création d'un state pour les categories
+// const [selectedCategory, setSelectedCategory] = useState('home');
 
 // == Composant
 const App = () => (
