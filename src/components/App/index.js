@@ -4,8 +4,9 @@ import React from 'react';
 // == Import
 import './styles.css';
 import Header from '../Header';
-import HomePage from '../HomePage';
 import Footer from '../Footer';
+import MainContent from '../MainContent';
+
 
 import BodyStyled from './BodyStyled';
 
@@ -13,7 +14,7 @@ import BodyStyled from './BodyStyled';
 const App = () => (
   <BodyStyled>
     <Header />
-    <HomePage />
+    <MainContent />
     <Footer />
   </BodyStyled>
 );
