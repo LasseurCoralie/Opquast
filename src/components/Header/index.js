@@ -11,7 +11,7 @@ const Header = () => (
     <nav>
       <NavLink className="nav-links" exact to="/">home</NavLink>
       <NavLink className="nav-links" exact to="/no-limit">no-limit</NavLink>
-      <NavLink className="nav-links" exact to="/truc">truc</NavLink>
+      <NavLink className="nav-links" exact to="/test">test</NavLink>
     </nav>
   </HeaderStyled>
 );
