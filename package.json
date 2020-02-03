@@ -46,12 +46,11 @@
     "webpack-merge": "*"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "dompurify": "^2.0.7",
+    "axios": "*",
     "prop-types": "*",
-    "react": "^16.12.0",
+    "react": "*",
     "react-dom": "*",
     "react-router-dom": "^5.1.2",
-    "styled-components": "^5.0.0"
+    "styled-components": "*"
   }
 }

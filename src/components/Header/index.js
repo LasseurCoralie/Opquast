@@ -1,25 +1,19 @@
 // == Import npm
 import React from 'react';
-import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 // == Import
 import HeaderStyled from './HeaderStyled';
 
 // == Composant
-const Header = ({ categories }) => (
+const Header = () => (
   <HeaderStyled>
     <nav>
-      {categories.map((category) => (
-        <a href="#" key={category}>{category}</a>
-      ))}
+      <NavLink className="nav-links" exact to="/">home</NavLink>
+      <NavLink className="nav-links" exact to="/no-limit">no-limit</NavLink>
+      <NavLink className="nav-links" exact to="/truc">truc</NavLink>
     </nav>
   </HeaderStyled>
 );
-
-Header.propTypes = {
-  categories: PropTypes.arrayOf(
-    PropTypes.string.isRequired,
-  ).isRequired,
-};
 
 export default Header;

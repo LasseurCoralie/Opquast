@@ -13,7 +13,7 @@ const HeaderStyled = styled.header`
     right: 8.33333%;
   }
 
-  a{
+  .nav-links{
     color: ${theme.mainTextColor};
     padding-bottom: ${theme.standardSize}rem;
 
