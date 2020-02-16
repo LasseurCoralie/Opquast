@@ -1,5 +1,6 @@
 // == Import npm
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // == Import
 import QuizStyled from './QuizStyled';
@@ -10,8 +11,8 @@ const Quiz = ({ quiz }) => {
     return randomNb;
   };
 
-  const randomQuestion = quiz.question[getRandomNb(1, 5)];
-  console.log(randomQuestion);
+  const randomQuestion = quiz[getRandomNb(1, 5)];
+  console.log(quiz);
 
   return (
     <QuizStyled>
@@ -51,6 +52,12 @@ const Quiz = ({ quiz }) => {
       </form>
     </QuizStyled>
   );
+};
+
+Quiz.propTypes = {
+  quiz: PropTypes.shape(
+    PropTypes.number.isRequired,
+  ).isRequired,
 };
 
 export default Quiz;
