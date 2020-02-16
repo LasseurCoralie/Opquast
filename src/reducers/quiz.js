@@ -1,4 +1,4 @@
-import { DO_ACTION } from 'src/actions/chat';
+import { DISPLAY_QUIZ } from 'src/actions/quiz';
 
 const initialState = {
   quizz: [
@@ -53,12 +53,18 @@ const initialState = {
       link: 'https://checklists.opquast.com/fr/qualiteweb/les-contenus-generes-via-les-styles-sont-dotes-dune-alternative-appropriee',
     },
   ],
+  statut: true,
 };
 
 const quizReducer = (state = initialState, action = {}) => {
   console.log('quiz reducer : ', action);
 
   switch (action.type) {
+    case DISPLAY_QUIZ:
+      return {
+        ...state,
+        statut: false,
+      };
     default:
       return state;
   }
