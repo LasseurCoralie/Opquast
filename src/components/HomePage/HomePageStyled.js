@@ -9,7 +9,7 @@ const HomePageStyled = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: ${theme.standardSize * 10}em;
+    padding-top: ${theme.standardSize * 4}em;
     margin-bottom: ${theme.standardSize * 6}em;
 
     div{
