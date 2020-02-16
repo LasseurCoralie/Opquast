@@ -1,6 +1,20 @@
 import { DISPLAY_QUIZ } from 'src/actions/quiz';
 
 const initialState = {
+  menu: [
+    {
+      title: 'home',
+      route: '/',
+    },
+    {
+      title: 'no limit',
+      route: 'no-limit',
+    },
+    {
+      title: 'test',
+      route: 'test',
+    },
+  ],
   quizz: [
     {
       questions: 'Est-ce que chaque image décorative doit être dotée d\'une balise alt complétée ?',

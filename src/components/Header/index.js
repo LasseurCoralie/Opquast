@@ -7,14 +7,14 @@ import PropTypes from 'prop-types';
 import HeaderStyled from './HeaderStyled';
 
 // == Composant
-const Header = (categoriesData) => {
-  console.log(categoriesData);
+const Header = ({ categories }) => {
+  console.log(categories);
 
   return (
     <HeaderStyled>
       <nav>
-        {categoriesData.map((categorie) => (
-          <NavLink className="nav-links" exact to={categorie}>{categorie}</NavLink>
+        {categories.map((categorie) => (
+          <NavLink className="nav-links" exact to={categorie.route}>{categorie.title}</NavLink>
         ))}
 
         {/* <NavLink className="nav-links" exact to="/">home</NavLink>
@@ -25,8 +25,5 @@ const Header = (categoriesData) => {
   );
 };
 
-Header.propTypes = {
-  categoriesData: PropTypes.array.isRequired,
-};
 
 export default Header;
