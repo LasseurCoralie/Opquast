@@ -25,5 +25,11 @@ const Header = ({ categories }) => {
   );
 };
 
+Header.propTypes = {
+  categories: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    route: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default Header;
