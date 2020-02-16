@@ -7,29 +7,23 @@ import PropTypes from 'prop-types';
 import HeaderStyled from './HeaderStyled';
 
 // == Composant
-const Header = ({ categories }) => {
-  console.log(categories);
-
-  return (
+const Header = ({ categories }) => (
     <HeaderStyled>
       <nav>
         {categories.map((categorie) => (
-          <NavLink className="nav-links" exact to={categorie.route}>{categorie.title}</NavLink>
+          <NavLink key={categorie.title} className="nav-links" exact to={categorie.route}>{categorie.title}</NavLink>
         ))}
-
-        {/* <NavLink className="nav-links" exact to="/">home</NavLink>
-        <NavLink className="nav-links" exact to="/no-limit">no-limit</NavLink>
-        <NavLink className="nav-links" exact to="/test">test</NavLink> */}
       </nav>
     </HeaderStyled>
-  );
-};
+);
 
 Header.propTypes = {
-  categories: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    route: PropTypes.string.isRequired,
-  }).isRequired,
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      route: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default Header;
