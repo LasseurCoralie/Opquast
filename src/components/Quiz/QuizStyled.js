@@ -9,7 +9,7 @@ const QuizStyled = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: ${theme.standardSize * 10}em;
+    padding-top: ${theme.standardSize * 4}em;
     margin-bottom: ${theme.standardSize * 6}em;
 
     div{
@@ -34,7 +34,7 @@ const QuizStyled = styled.div`
     border:  ${theme.standardSize}em solid ${theme.mainTextColor};
     border-radius: 10px;
 
-    p.quiz-info{
+    .quiz-info {
       margin-bottom: ${theme.standardSize}em;
       font-family: 'Roboto', sans-serif;
       font-weight: bold
@@ -60,15 +60,38 @@ const QuizStyled = styled.div`
 
     div.quiz-answer{
       margin: ${theme.standardSize * 2}em ${theme.standardSize * 3}em 0 ${theme.standardSize * 3}em;
-    
-      p{
+      text-align: left;
+      font-family: 'Roboto', sans-serif;
+
+      p.answer{
         border-top: 1px solid ${theme.mainTextColor};
         padding-top:${theme.standardSize}em;
-      
-        span{
-          text-decoration: underline;
+        padding-bottom:${theme.standardSize}em;
+      }
+
+      p.goals{
+        color: ${theme.secondTextColor}
+      }
+
+      span{
+        font-family: 'Roboto Slab', serif;
+        text-decoration: underline;
+      }
+
+      div.quiz-link{
+        text-align: center;
+        margin-top: ${theme.standardSize}em;
+
+        a{
+          font-weight: bold;
+
+          &:hover{
+            text-decoration: underline;
+          }
         }
       }
+
+
     }
   }
 

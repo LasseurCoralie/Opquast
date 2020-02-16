@@ -2,10 +2,13 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
+
 // == Import
-import MainContentStyled from './MainContentStyled';
+import Quiz from 'src/containers/Quiz';
 import HomePage from '../HomePage';
-import Quiz from '../Quiz';
+
+// == Import Styled
+import MainContentStyled from './MainContentStyled';
 
 
 const MainContent = () => (

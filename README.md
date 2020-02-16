@@ -25,7 +25,7 @@ Création d'un site de quiz pour réviser les notions d'Opquast
 
 Webdesign de la page
 
-Intégration du site en via React
+Intégration du site via React
 
 Création de routes pour naviguer à travers les différentes pages
 

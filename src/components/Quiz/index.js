@@ -4,37 +4,53 @@ import React from 'react';
 // == Import
 import QuizStyled from './QuizStyled';
 
-const Quiz = () => (
-  <QuizStyled>
-    <div className="quiz-title">
-      <div />
-      <h1>no limit!</h1>
-    </div>
-    <form>
-      <div className="quiz-content">
-        <p className="quiz-info">#29 - Rubrique : contact</p>
-        <h2 className="quiz-question">Chaque demande d'information fait-elle l'objet d'un accusé de réception ?</h2>
-        <label>
-          <input type="radio" value="option1" name="question" />
-          oui
-        </label>
-        <label>
-          <input type="radio" value="option2" name="question" />
-          non
-        </label>
-        <div className="quiz-answer">
-          <p>
-            <span>Réponse :</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Cumque eaque neque sit! Error odio reiciendis debitis cumque expedita,
-            porro tenetur, aperiam sunt.
-          </p>
+const Quiz = ({ quiz }) => {
+  const getRandomNb = (min, max) => {
+    const randomNb = Math.floor(Math.random() * (max - min + 1)) + min;
+    return randomNb;
+  };
+
+  const randomQuestion = quiz.question[getRandomNb(1, 5)];
+  console.log(randomQuestion);
+
+  return (
+    <QuizStyled>
+      <div className="quiz-title">
+        <div />
+        <h1>no limit!</h1>
+      </div>
+      <form>
+        <div className="quiz-content">
+          {/* Début map */}
+          <p className="quiz-info">#{randomQuestion.id} - Rubrique : {randomQuestion.rubrique}</p>
+          <h2 className="quiz-question">{randomQuestion.questions}</h2>
+          <label>
+            <input type="radio" value="option1" name="question" />
+            {randomQuestion.goodAnswer}
+          </label>
+          <label>
+            <input type="radio" value="option2" name="question" />
+            {randomQuestion.wrongAnswer}
+          </label>
+          <div className="quiz-answer">
+            <p className="answer">
+              <span>Réponse :</span> {randomQuestion.quote}
+            </p>
+            <p className="goals">
+              <span>Objectifs :</span> {randomQuestion.goals}
+            </p>
+            <div className="quiz-link">
+              <a href={randomQuestion.link}>Cliquer ici pour en savoir plus !</a>
+            </div>
+          </div>
+          {/* Fin map */}
         </div>
-      </div>
-      <div className="quiz-button">
-        <button type="submit" value="envoyer">valider</button>
-      </div>
-    </form>
-  </QuizStyled>
-);
+        <div className="quiz-button">
+          <button type="submit" value="envoyer">valider</button>
+        </div>
+      </form>
+    </QuizStyled>
+  );
+};
 
 export default Quiz;
